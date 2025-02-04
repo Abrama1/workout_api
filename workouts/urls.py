@@ -4,5 +4,5 @@ from .views import WorkoutPlanListCreateView, FitnessGoalListCreateView, WeightT
 urlpatterns = [
     path('workout-plans/', WorkoutPlanListCreateView.as_view(), name='workout-plans'),
     path('fitness-goals/', FitnessGoalListCreateView.as_view(), name='fitness-goals'),
-    path('weight-tracking/', WeightTrackingListCreateView(), name='weight-tracking'),
+    path('weight-tracking/', WeightTrackingListCreateView.as_view(), name='weight-tracking'),
 ]
