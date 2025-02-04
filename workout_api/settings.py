@@ -89,7 +89,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'workout_db',
         'USER': 'postgres',
-        'PASSWORD': 'your_password!',
+        'PASSWORD': 'A2b0r0a0m6a!',
         'HOST': 'localhost',
         'PORT': '5432',
     }
