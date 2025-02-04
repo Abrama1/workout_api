@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import WorkoutPlan, WorkoutPlanExercise, Exercise
+from .models import WorkoutPlan, WorkoutPlanExercise, Exercise, FitnessGoal, WeightTracking
 
 
 class WorkoutPlanSerializer(serializers.ModelSerializer):
@@ -46,3 +46,23 @@ class WorkoutPlanSerializer(serializers.ModelSerializer):
             )
 
         return workout_plan
+
+
+class FitnessGoalSerializer(serializers.ModelSerializer):
+    """
+    Serializer for FitnessGoal model.
+    Users can set their goals and track their progress.
+    """
+    class Meta:
+        model = FitnessGoal
+        fields = '__all__'
+        read_only_fields = ['user']
+
+class WeightTrackingSerializer(serializers.ModelSerializer):
+    """
+    Serializer for WeightTracking model.
+    """
+    class Meta:
+        model = WeightTracking
+        fields = '__all__'
+        read_only_fields = ['user']
